@@ -12,6 +12,7 @@ seurat_object <- MapQuery(
     query = seurat_object,
     reference = multi,
     reference.reduction = "spca",
+    refdata = list(celltype = "wsnn_res.1"),
     reduction.model = "wnn.umap")
 
 Idents(seurat_object) <- "predicted.celltype"
